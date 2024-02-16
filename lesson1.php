@@ -4,7 +4,7 @@
 
 
 function convertThreeTimes($i) {
-    echo ($i * 3);
+    return ($i * 3);
 };
 
 echo convertThreeTimes(5);

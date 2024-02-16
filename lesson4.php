@@ -18,14 +18,16 @@
 // 100円玉で購入した場合、
 // 50円足りません。
 
-$yen = 10000;   // 購入金額
+$yen = 100;   // 購入金額
 $product = 150; // 商品金額
 
 function calc($yen,$product) {
     if ($yen < $product) {
+        echo $yen."円玉で購入した場合、"."<br>";
         echo ($product - $yen) . '円足りません。';
         return;
     }
+    
 
     $change = $yen - $product;
     $money = [10000,5000,1000,500,100,50,10,5,1];

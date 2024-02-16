@@ -9,23 +9,24 @@ date_default_timezone_set('Asia/Tokyo');
 
 $w = date("w");
 $week = array("日", "月", "火", "水", "木", "金", "土");
-echo date("Y/m/d") . "($week[$w])<br>";
+echo"・現在日時 (";
+echo date("Y年m月d日") . "($week[$w]曜日) )<br>"."・現在日時から３日後 (";
 
 
 $dateD= strtotime('+3 day'); 
-echo date('Y-m-d H:i:s', $dateD); 
-echo "<br>";
+echo date('Y年m月d日 H時i分s秒)', $dateD); 
+echo "<br>"."・現在日時から１２時間前（";
 
 
 $dateH = strtotime('-12 hour'); 
-echo date('Y-m-d H:i:s', $dateH); 
-echo "<br>";
+echo date('Y年m月d日 H時i分s秒)', $dateH); 
+echo "<br>"."・2020年元旦から現在までの経過日数 (";
 
 
 $today = date("Y-m-d");
 $today = strtotime($today);
 $day = strtotime('2020-01-01');
-echo ($today - $day) / (60 * 60 * 24). '日';
+echo ($today - $day) / (60 * 60 * 24). '日'.")";
 
 
 // ・現在日時（xxxx年xx月xx日（x曜日））
